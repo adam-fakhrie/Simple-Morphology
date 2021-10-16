@@ -19,3 +19,13 @@ ax[0].set_title('Original Image')
 binary = rgb2gray(image2)<0.15 #mengubah gambar menjadi greyscale
 ax[1].imshow(binary)
 ax[1].set_title('Binarized Image')
+
+
+
+
+fig, ax = plt.subplots(1,2, figsize=(15,5))
+
+ax[0].imshow(erosion(binary), cmap='gray');
+ax[0].set_title('Eroded / Pengikisasan')
+ax[1].imshow(dilation(binary), cmap='gray')
+ax[1].set_title('Dilated / Pelebaran')
